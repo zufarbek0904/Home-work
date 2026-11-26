@@ -42,27 +42,25 @@ class Talaba(Shaxs):
         return cls.talabalar_soni
 
 
-shaxs1 = Shaxs("Али", 25)
-shaxs2 = Shaxs("Вали", 30)
+shaxs1 = Shaxs("Zufar", 15)
+shaxs2 = Shaxs("Jahongir", 15)
 
-talaba1 = Talaba("Зафар", 18, 1)
-talaba2 = Talaba("Азиз", 20, 2)
+talaba1 = Talaba("Ali", 15, 1)
 
 print(shaxs1.get_ism())
 print(shaxs1.get_yosh())
+
+print(shaxs2.get_ism())
+print(shaxs2.get_yosh())
 
 print(talaba1.get_ism())
 print(talaba1.get_yosh())
 print(talaba1.get_kurs())
 
-shaxs1.set_ism("Хасан")
-shaxs1.set_yosh(26)
+shaxs1.set_ism("Zufar")
+shaxs1.set_yosh(15)
 
-talaba1.set_kurs(3)
-
-print(shaxs1.get_ism())
-print(shaxs1.get_yosh())
-print(talaba1.get_kurs())
+talaba1.set_kurs(2)
 
 print(Shaxs.get_odamlar_soni())
 print(Talaba.get_talabalar_soni())
