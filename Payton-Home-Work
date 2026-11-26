@@ -1,0 +1,68 @@
+class Shaxs:
+    odamlar_soni = 0
+
+    def __init__(self, ism, yosh):
+        self.__ism = ism
+        self.__yosh = yosh
+        Shaxs.odamlar_soni += 1
+
+    def get_ism(self):
+        return self.__ism
+
+    def set_ism(self, ism):
+        self.__ism = ism
+
+    def get_yosh(self):
+        return self.__yosh
+
+    def set_yosh(self, yosh):
+        self.__yosh = yosh
+
+    @classmethod
+    def get_odamlar_soni(cls):
+        return cls.odamlar_soni
+
+
+class Talaba(Shaxs):
+    talabalar_soni = 0
+
+    def __init__(self, ism, yosh, kurs):
+        super().__init__(ism, yosh)
+        self.__kurs = kurs
+        Talaba.talabalar_soni += 1
+
+    def get_kurs(self):
+        return self.__kurs
+
+    def set_kurs(self, kurs):
+        self.__kurs = kurs
+
+    @classmethod
+    def get_talabalar_soni(cls):
+        return cls.talabalar_soni
+
+
+shaxs1 = Shaxs("Али", 25)
+shaxs2 = Shaxs("Вали", 30)
+
+talaba1 = Talaba("Зафар", 18, 1)
+talaba2 = Talaba("Азиз", 20, 2)
+
+print(shaxs1.get_ism())
+print(shaxs1.get_yosh())
+
+print(talaba1.get_ism())
+print(talaba1.get_yosh())
+print(talaba1.get_kurs())
+
+shaxs1.set_ism("Хасан")
+shaxs1.set_yosh(26)
+
+talaba1.set_kurs(3)
+
+print(shaxs1.get_ism())
+print(shaxs1.get_yosh())
+print(talaba1.get_kurs())
+
+print(Shaxs.get_odamlar_soni())
+print(Talaba.get_talabalar_soni())
